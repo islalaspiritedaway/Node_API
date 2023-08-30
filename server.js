@@ -9,6 +9,12 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 const MONGO_URL = process.env.MONGO_URL;
+const FRONTENDEND = process.env.FRONTENDEND;
+
+const options = {
+  origin: FRONTENDEND,
+  optionsSuccessStatus: 200,
+};
 
 app.use(cors());
 app.use(express.json());
